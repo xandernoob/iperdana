@@ -1,0 +1,36 @@
+.NavigationContainer {
+    position: relative;
+
+    &:before {
+        content: "";
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        transform: scaleY(0);
+        transform-origin: left top; 
+        transition: transform .6s cubic-bezier(.37, .16, .12,1);
+    }
+
+    &:hover:before {
+        content: "";
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        transform: scaleY(1);
+        transform-origin: right top;
+        transition: transform .6s cubic-bezier(.37, .16, .12,1);
+    }
+    
+    .NavigationItems {
+        list-style: none;
+        display: flex;
+        padding: 0 20px;
+    }
+}
+

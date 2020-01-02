@@ -1,0 +1,20 @@
+$purple: #9370DB;
+$purple-mid: #BA55D3;
+$purple-dark: #FF00FF;
+
+$grey: #F2F2F2;
+
+
+// KEYFRAMES
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

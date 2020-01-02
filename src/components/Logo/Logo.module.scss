@@ -1,0 +1,12 @@
+@import '../../variables/variables.scss';
+
+.Logo {
+    background-color: $grey;
+    padding: 0 10px;
+    width: 150px;
+    box-sizing: border-box;
+
+    & img {
+        width: 100%;
+    }
+}
