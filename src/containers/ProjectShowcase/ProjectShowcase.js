@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+
+import Header from '../../components/Navigation/Header/Header';
 
 import classes from './ProjectShowcase.module.scss'
 
@@ -9,18 +12,28 @@ class ProjectShowcase extends Component {
         project: ProjectData
     }
 
+    moreInfo = () => {
+        this.props.history.push({
+            pathname: '/project',
+        })
+    }
+
+
     render () {
         return (
+            <>
+            <Header />
             <div className={classes.ProjectContainer}>
-                {this.state.project.map((key, title) => {
+                {this.state.project.map((project) => {
                     return (
-                        <div className={classes.ProjectContainerInner}>
-                            <h2>{key.title}</h2>
-                            <img src={key.image}></img>
+                        <div key={project.title} className={classes.ProjectContainerInner}>
+                            <h2>{project.title}</h2>
+                            <img onClick={this.moreInfo} src={project.image}></img>
                         </div>
                     )
                 })}
             </div>
+            </>
         );
     }
 }
