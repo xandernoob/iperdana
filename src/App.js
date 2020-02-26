@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 
-import Header from './components/Navigation/Header/Header';
 import Spinner from './components/UI/Spinner/Spinner';
 
 import ProjectShowcase from './containers/ProjectShowcase/ProjectShowcase';
+import Project from './containers/Project/Project';
 
 import './App.scss';
 
@@ -13,12 +13,7 @@ const App = () => {
     <div>
       <div>
       <Switch>
-        <Route path="/project" 
-          component={() => { 
-            window.location.href = 'https://www.google.com/'; 
-            return null;
-          }
-        }/>
+        <Route path="/project" component={Project}/>
         <Route path="/" component={ProjectShowcase} />
       </Switch>
       </div>
