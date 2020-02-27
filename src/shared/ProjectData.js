@@ -14,17 +14,20 @@ export const ProjectData =
     {
         id: 1,
         title: "Image-2",
-        image: projectImage2
+        image: projectImage2,
+        kv: projectKv1
     },
     {
         id: 2,
         title: "Image-3",
-        image: projectImage3
+        image: projectImage3,
+        kv: projectKv1
     },
     {
         id: 3,
         title: "Image-4",
-        image: projectImage4
+        image: projectImage4,
+        kv: projectKv1
     }
 
 ]

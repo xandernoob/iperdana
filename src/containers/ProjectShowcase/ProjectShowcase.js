@@ -9,12 +9,13 @@ import { ProjectData } from '../../shared/ProjectData';
 
 class ProjectShowcase extends Component {
     state = {
-        project: ProjectData
+        project: ProjectData,
     }
 
-    moreInfo = () => {
+    moreInfo = (id) => {
+        console.log(id);
         this.props.history.push({
-            pathname: '/project',
+            pathname: '/project' + id 
         })
     }
 
@@ -26,9 +27,10 @@ class ProjectShowcase extends Component {
             <div className={classes.ProjectContainer}>
                 {this.state.project.map((project) => {
                     return (
-                        <div key={project.ids} className={classes.ProjectContainerInner}>
+                        <div key={project.id} className={classes.ProjectContainerInner}>
                             <h2>{project.title}</h2>
-                            <img onClick={this.moreInfo} src={project.image}></img>
+                            <img onClick={() => this.moreInfo(project.id)} src={project.image}></img>
+                            {/* {USE A TAG} */}
                         </div>
                     )
                 })}

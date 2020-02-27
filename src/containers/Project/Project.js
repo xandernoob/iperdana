@@ -6,19 +6,20 @@ import Header from '../../components/Navigation/Header/Header';
 import { ProjectData } from '../../shared/ProjectData';
 
 class Project extends Component {
-    state = {
-        project: ProjectData
-    }
 
     render () {
+        let Data = ProjectData.filter((data) => {
+            return data.id.toString() === this.props.match.params.id
+        });
+        console.log(Data);
+        console.log(ProjectData);
         return (
             <div>
                 <Header />
                 <div className={classes.mainContainer}>
-                    <img src={this.state.project[0].kv} />
+                    <img src={Data[0].kv} />
                 </div>
-                <h1>{this.state.project[0].title}</h1>
-                {console.log(this.state.project[0].title)}
+                <h1>{Data[0].title}</h1>
             </div>
         )
     }

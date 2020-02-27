@@ -13,7 +13,8 @@ const App = () => {
     <div>
       <div>
       <Switch>
-        <Route path="/project" component={Project}/>
+        {/* <Route path="/project:id" render={(props) => <Project {...props}/> }/> */}
+        <Route path="/project:id" component={Project}/>
         <Route path="/" component={ProjectShowcase} />
       </Switch>
       </div>
