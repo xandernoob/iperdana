@@ -5,7 +5,7 @@ import classes from './Logo.module.scss';
 
 const logo = (props) => (
     <div className={classes.Logo}>
-        <img src={siteLogo} alt={"IPerdana"} />
+        <a href="/"><img src={siteLogo} alt={"IPerdana"} /></a>
     </div>
 );
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 
 import Header from '../../components/Navigation/Header/Header';
 
@@ -29,7 +28,7 @@ class ProjectShowcase extends Component {
                     return (
                         <div key={project.id} className={classes.ProjectContainerInner}>
                             <h2>{project.title}</h2>
-                            <img onClick={() => this.moreInfo(project.id)} src={project.image}></img>
+                            <img onClick={() => this.moreInfo(project.id)} src={project.image} alt={project.title}></img>
                             {/* {USE A TAG} */}
                         </div>
                     )
